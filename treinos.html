@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <title>PFLPO</title>
+</head>
+
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-dark bg-info navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/pf_logo.png" style="width: 90px;" alt="Pf levantamento de peso">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Botão de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="#comp">Competições</a>
+                    <a class="nav-item nav-link" href="#treinos">Treinos</a>
+                    <a class="nav-item nav-link" href="#Glossario" data-toggle="modal">Glossário</a>
+                    <a class="nav-item nav-link" href="#header">Contato</a>
+                </div>
+
+                <div class="navbar-nav">
+                    <div class="dropdown">
+                        <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                            Meu Perfil
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="recordes.html">Meus recordes</a>
+                            <a class="dropdown-item" href="treinos.html">Meus treinos</a>
+                            <a class="dropdown-item" href="resultados.html">Resultados</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="#janelamodal">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px; min-height: 700px;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Treinos</h2>
+                <hr>
+                <div class="d-flex align-items-center">
+                    <h5 class="mr-3 mb-0">Progresso dos treinos</h5>
+                    <button class="btn btn-info btn-sm" id="atualizarProgressoBtn" title="Atualizar Progresso">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+                <div class="progress mt-2">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100">0%</div>
+                </div>
+                <hr>
+                <div class="col">
+                    <button class="btn btn-info text-white rounded border-white" data-toggle="modal"
+                        data-target="#adicionarTreinoModal">Adicionar Novo Treino</button>
+                </div>
+                <table class="table mt-3 text-light">
+                    <thead>
+                        <tr>
+                            <th scope="col">Treino</th>
+                            <th scope="col">Concluído</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="treinosTableBody">
+                        <!-- Os treinos serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Adicionar Treino -->
+    <div class="modal fade" id="adicionarTreinoModal" tabindex="-1" role="dialog"
+        aria-labelledby="adicionarTreinoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adicionarTreinoModalLabel">Adicionar Treino</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="adicionarExercicioBtn">Adicionar Exercício</button>
+                    </div>
+                    <div class="form-group" id="exerciciosContainer">
+                        <!-- Os exercícios serão adicionados aqui -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="salvarTreinoBtn">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-sm-5">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-user"></i> Paulo Neves</li>
+                        <li><i class="fas fa-phone"></i> (21)98103-4882</li>
+                        <li class="d-flex align-items-center"><i class="fab fa-instagram"></i> <a
+                                href='https://www.instagram.com/pflevantamentodepeso/'
+                                class="instagram-link">@pflevantamentodepeso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/treinos.js"></script>
+</body>
+
+</html>
