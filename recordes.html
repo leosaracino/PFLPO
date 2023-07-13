@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="assets/css/all.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <title>Bootstrap</title>
+</head>
+
+<body class="bg-dark text-light">
+   <nav class="navbar navbar-dark bg-info navbar-expand-md fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="index1.html"><img src="assets/images/pf_logo.png" style="width: 90px;"
+               alt="Pf levantamento de peso"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav mr-auto">
+               <a class="nav-item nav-link" href="#competicoes">Competições</a>
+               <a class="nav-item nav-link" href="#treinos">Treinos</a>
+
+               <a class="nav-item nav-link" href="#Glossario" data-toggle="modal">Glossário</a>
+
+               <a class="nav-item nav-link" href="#header">Contato</a>
+            </div>
+
+            <div class="navbar-nav">
+               <div class="dropdown">
+                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                     Meu Perfil
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="recordes.html">Meus recordes</a>
+                     <a class="dropdown-item" href="treinos.html">Meus treinos</a>
+                     <a class="dropdown-item" href="resultados.html">Resultados</a>
+                  </div>
+               </div>
+               <a class="nav-item nav-link" href="#janelamodal">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container" style="margin-top: 150px; min-height: 790px;">
+         <div class="col-xl-10 col-lg-9 col-sm-7">
+            <div class="row mt-5">
+               <div class="col">
+                <button class="btn btn-info text-white rounded border-white" data-toggle="modal" data-target="#modalAdicionar">Adicionar Novo Recorde</button>
+               </div>
+            </div>
+
+            <div class="row mt-4">
+               <div class="col">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th>Nome</th>
+                           <th>Peso (kg)</th>
+                           <th>Data</th>
+                        </tr>
+                     </thead>
+                     <tbody id="tabelaRecordes">
+                        <!-- Os registros serão adicionados aqui -->
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Novo Recorde</h5>
+               <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <form id="formAdicionar">
+                  <div class="mb-3">
+                     <label for="data">Data</label>
+                     <input type="date" class="form-control" id="data" value="YYYY-MM-DD" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="exercicio">Nome do Exercício</label>
+                     <input placeholder="Exercício" type="text" class="form-control" id="exercicio" required>
+                  </div>
+                  <div class="mb-3">
+                     <label for="peso">Peso (kg)</label>
+                     <input placeholder="Kg" type="number" class="form-control" id="peso" required>
+                  </div>
+               </form>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary" id="btnSalvar">Salvar</button>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <footer class="footer bg-info">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-2 col-lg-3 col-sm-5">
+            <h5>Contato</h5>
+            <ul class="list-unstyled">
+               <li><i class="fas fa-user"></i> Paulo Neves</li>
+               <li><i class="fas fa-phone"></i> (21)98103-4882</li>
+               <li><i class="fas fa-instagram"></i> <a href='https://www.instagram.com/pflevantamentodepeso/'>@pflevantamentodepeso</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</footer>
+   
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/tabela.js"></script>
+</body>
+
+</html>
