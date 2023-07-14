@@ -21,9 +21,7 @@
             <div class="navbar-nav mr-auto">
                <a class="nav-item nav-link" href="#competicoes">Competições</a>
                <a class="nav-item nav-link" href="#treinos">Treinos</a>
-
                <a class="nav-item nav-link" href="#Glossario" data-toggle="modal">Glossário</a>
-
                <a class="nav-item nav-link" href="#header">Contato</a>
             </div>
 
@@ -49,48 +47,47 @@
    <div class="container" style="margin-top: 150px; min-height: 700px;">
       <div class="col-xl-10 col-lg-9 col-sm-7">
          <br class="row mt-5">
-            <h2>Recordes</h2>
-            <br></br>
-            <div class="col">
-               <button class="btn btn-info text-white rounded border-white" data-toggle="modal" data-target="#modalAdicionar">Adicionar Novo Recorde</button>
-            </div>
+         <h2>Recordes</h2>
+         <br></br>
+         <div class="col">
+            <button class="btn btn-info text-white rounded border-white" data-toggle="modal" data-target="#modalAdicionar">Adicionar Novo Recorde</button>
          </div>
+      </div>
 
-         <div class="row mt-4 text-white">
-            <div class="col">
-               <table class="table text-light">
-                  <thead>
-                     <tr>
-                        <th>
-                           Nome
-                           <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarPeso" data-ordenacao="asc">
-                              <i class="fas fa-arrow-down text-light"></i>                       
-                           </button>
-                        </th>
-                        <th>
-                           Peso (kg)
-                           <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarPeso" data-ordenacao="asc">
-                              <i class="fas fa-arrow-down text-light"></i>                       
-                           </button>
-                        </th>
-                        <th>
-                           Data
-                           <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarPeso" data-ordenacao="asc">
-                              <i class="fas fa-arrow-down text-light"></i>                       
-                           </button>
-                        </th>
-                        <th></th> <!-- Coluna para o botão de exclusão -->
-                     </tr>
-                  </thead>
-                  <tbody id="tabelaRecordes">
-                     <!-- Os registros serão adicionados aqui -->
-                  </tbody>
-               </table>
-            </div>
+      <div class="row mt-4 text-white">
+         <div class="col">
+            <table class="table text-light">
+               <thead>
+                  <tr>
+                     <th>
+                        Nome
+                        <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarNome" data-ordenacao="asc">
+                           <i class="fas fa-arrow-down text-light"></i>                       
+                        </button>
+                     </th>
+                     <th>
+                        Peso (kg)
+                        <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarPeso" data-ordenacao="asc">
+                           <i class="fas fa-arrow-down text-light"></i>                       
+                        </button>
+                     </th>
+                     <th>
+                        Data
+                        <button class="bg-info ml-1 rounded-circle border border-white" id="btnOrdenarData" data-ordenacao="asc">
+                           <i class="fas fa-arrow-down text-light"></i>                       
+                        </button>
+                     </th>
+                     <th></th> <!-- Coluna para o botão de exclusão -->
+                  </tr>
+               </thead>
+               <tbody id="tabelaRecordes">
+                  <!-- Os registros serão adicionados aqui -->
+               </tbody>
+            </table>
          </div>
       </div>
    </div>
-   
+
    <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
       <div class="modal-dialog">
          <div class="modal-content">
@@ -141,11 +138,10 @@
          </div>
       </div>
    </div>
-   
+
    <script src="assets/js/jquery-3.3.1.js"></script>
    <script src="assets/js/popper.js"></script>
    <script src="assets/js/bootstrap.js"></script>
    <script src="assets/js/tabela.js"></script>
-</body>
 
 </html>
