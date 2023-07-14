@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var treinos = [];
-    
+
     $('#adicionarExercicioBtn').click(function () {
         var exercicioHtml =
             '<div class="row">' +
@@ -21,10 +21,10 @@ $(document).ready(function () {
     $('#salvarTreinoBtn').click(function () {
         var exercicios = [];
         $('#exerciciosContainer .row').each(function () {
-            var nomeExercicio = $(this).find('input:nth-child(1)').val();
-            var porcentagem = $(this).find('input:nth-child(2)').val();
-            var peso = $(this).find('input:nth-child(3)').val();
-
+            var nomeExercicio = $(this).find('input:eq(0)').val();
+            var porcentagem = $(this).find('input:eq(1)').val();
+            var peso = $(this).find('input:eq(2)').val();
+        
             exercicios.push({
                 nomeExercicio: nomeExercicio,
                 porcentagem: porcentagem,
@@ -45,7 +45,7 @@ $(document).ready(function () {
     $(document).on('change', '.treino-checkbox', function () {
         var treinoIndex = $(this).data('treino-index');
         var treino = treinos[treinoIndex];
-        
+
         treino.concluido = this.checked;
         atualizarProgresso();
     });
